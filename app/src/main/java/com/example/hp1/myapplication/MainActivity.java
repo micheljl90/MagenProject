@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt3.setOnClickListener(this);
         bt.setOnClickListener(this);
     }
+    
 
     public boolean onCreateOptionsMenu(Menu menu) {
 
