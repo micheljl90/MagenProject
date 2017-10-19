@@ -46,4 +46,10 @@ android:orientation="vertical"
         android:id="@+id/bt"
         android:layout_gravity="bottom" />
 
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt3" />
+
 </LinearLayout>
