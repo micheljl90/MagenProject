@@ -10,7 +10,7 @@
         android:id="@+id/tvpc1"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:text="Desktop Intel Core i5 7400 3.0Ghz - GMR BEGINNER" />
+        android:text="Desktop Intel Core i5 8400 2.8Ghz - GMR VALUE           Price:3390" />
 
     <ImageView
         android:layout_width="150dp"

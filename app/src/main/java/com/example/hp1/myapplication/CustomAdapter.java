@@ -35,7 +35,6 @@ public class CustomAdapter  extends ArrayAdapter<Pc> {
         TextView title = (TextView) cuView.findViewById(R.id.tvpc1);
         ImageView image = (ImageView) cuView.findViewById(R.id.pc1b);
         Button btnClick = (Button) cuView.findViewById(R.id.btnBuy);
-
         title.setText(item.getTitle());
         image.setImageResource(item.getImageId());
 

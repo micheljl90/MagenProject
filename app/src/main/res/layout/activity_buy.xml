@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Optical Drive" />
+            android:text="HardDrive" />
 
         <Spinner
             android:id="@+id/opt1"
@@ -177,7 +177,7 @@
 
 
     <Button
-        android:id="@+id/checkout"
+        android:id="@+id/check"
         android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:text="Proceed to checkout" />

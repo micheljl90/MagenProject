@@ -9,21 +9,22 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 public class Buy extends AppCompatActivity implements View.OnClickListener {
-    Button checkout;
+    Button check;
     String[] str1={"GeForce® GTX 1050 D5 2G(rev1.0/rev1.1) ","ASUS GeForce GTX 1060 3GB Dual-Fan OC Edition Graphics Card (DUAL-GTX1060-O3G)","ASUS GeForce GTX 1080 8GB Turbo Graphic Card TURBO-GTX1080-8G"};
-    String[] str2={"item 1","item 2","item 3"};
-    String[] str3={"item 1","item 2","item 3"};
-    String[] str4 ={"item 1","item 2","item 3"};
-    String[] str5={"item 1","item 2","item 3"};
-    String[] str6={"item 1","item 2","item 3"};
-    String[] str7={"item 1","item 2","item 3"};
+    String[] str2={"G.Skill Value 8GB DDR4 2133Mhz CL15 Kit","item 2","item 3"};
+    String[] str3={" Intel Core i5 8400 2.8Ghz 9MB Cache s1151v2 - Tray ","item 2","item 3"};
+    String[] str4 ={"Asus PRIME H310M-K LGA1151v2, Intel H310, DDR4, PCI-E, VGA, DVI","item 2","item 3"};
+    String[] str5={"Arctic Freezer 13 CPU Cooler","item 2","item 3"};
+    String[] str6={"Western Digital Caviar Blue 1TB Sata III WD10EZEX","item 2","item 3"};
+    String[] str7={" Antec 450W Active PFC VP450P PSU ","item 2","item 3"};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy);
-        checkout = (Button) findViewById(R.id.bt3);
+        check = (Button) findViewById(R.id.check);
+        check.setOnClickListener(this);
 
 
 
@@ -50,12 +51,13 @@ public class Buy extends AppCompatActivity implements View.OnClickListener {
         ArrayAdapter<String> adapterS7 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,str7);
         s7.setAdapter(adapterS7);
 
+
     }
 
 
     @Override
     public void onClick(View v) {
-        if (checkout == v) {
+        if ( check== v) {
             {
                 Intent i = new Intent(this, Checkout.class);
                 startActivity(i);
