@@ -23,7 +23,7 @@ import static com.example.hp1.myapplication.R.layout.custom_row;
 import static com.example.hp1.myapplication.R.layout.custom_row2;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button bt,bt3;
+    Button bt,bt3,btnlogin;
     EditText bud;
 
 
@@ -34,8 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         bt = (Button) findViewById(R.id.bt);
         bt3 = (Button) findViewById(R.id.bt3);
+        btnlogin = (Button) findViewById(R.id.btnlogin);
         bt3.setOnClickListener(this);
         bt.setOnClickListener(this);
+        btnlogin.setOnClickListener(this);
+
 
         bud=(EditText)findViewById(R.id.bud);
     }
@@ -115,6 +118,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
 
 
+        }
+        if(btnlogin == v){
+            Intent i = new Intent(this,Login.class);
+            startActivity(i);
         }
     }
 
