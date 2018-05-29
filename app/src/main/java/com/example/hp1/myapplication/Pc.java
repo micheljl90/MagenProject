@@ -1,12 +1,14 @@
 package com.example.hp1.myapplication;
 
-/**
- * Created by Hp1 on 28/09/2017.
- */
-
 public class Pc {
+    private long id;
     private String title;
     private int imageId;
+
+    public Pc(String title, int imageId) {
+        this.title = title;
+        this.imageId = imageId;
+    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -25,8 +27,5 @@ public class Pc {
         return imageId;
     }
 
-    public Pc(String title, int imageId) {
-        this.title = title;
-        this.imageId = imageId;
-    }
+
 }

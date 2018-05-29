@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class notification extends AppCompatActivity {
+public class Notification extends AppCompatActivity {
 
     private NotificationCompat.Builder builder;
     private Button bt;
@@ -26,9 +26,9 @@ public class notification extends AppCompatActivity {
         builder = new NotificationCompat.Builder(this);
 
         //customize the builder
-        builder.setSmallIcon(R.drawable.str);
+     //   builder.setSmallIcon(R.drawable.str);
         builder.setContentTitle("Notification Title");
-        builder.setContentText("this is the body of the notification message");
+        builder.setContentText("this is the body of the Notification message");
 
         //
         Intent bIntent = new Intent(this, MainActivity.class);
@@ -38,7 +38,7 @@ public class notification extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add as notification
+                // Add as Notification
                 NotificationManager manager = (NotificationManager) getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
                 manager.notify(0, builder.build());
                 Toast.makeText(getBaseContext(),"haneen",Toast.LENGTH_SHORT).show();

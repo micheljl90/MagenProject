@@ -10,12 +10,23 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
+import static com.example.hp1.myapplication.Cump2.PCImage;
+
 import static com.example.hp1.myapplication.R.id.home;
+import static com.example.hp1.myapplication.R.layout.custom_row;
+import static com.example.hp1.myapplication.R.layout.custom_row2;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button bt,bt3;
+    EditText bud;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt3 = (Button) findViewById(R.id.bt3);
         bt3.setOnClickListener(this);
         bt.setOnClickListener(this);
+
+        bud=(EditText)findViewById(R.id.bud);
     }
+
 
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -66,27 +80,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (bt3 == v)
         {
+            String stBud=bud.getText().toString();
+            int integerBud=Integer.parseInt(stBud);
+            if(integerBud>=2500 &&integerBud<=5000)
+            {
+                Intent i = new Intent(this,Cump2.class);
+                startActivity(i);
 
-    Intent i = new Intent();
-    i.setClass(this,MapsActivity.class);
 
-    startActivity(i);
-}
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Register");
+                builder.setMessage("You have to be signed in to continue");
+                builder.setNegativeButton("Cancel", null);
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "!!!", Toast.LENGTH_SHORT).show();
+
+
+                    }
+                });
+
+                AlertDialog ad = builder.create();
+                ad.show();
+            }
+
+        }
         if(bt==v) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Alert Dialog");
-            builder.setMessage("Alert dialog");
-            builder.setNegativeButton("Cancel", null);
-            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(getApplicationContext(), "!!!", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this,Register.class);
+            startActivity(i);
 
-                }
-            });
-            AlertDialog ad = builder.create();
-            ad.show();
+
         }
     }
+
+
 }
