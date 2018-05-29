@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Checkout extends AppCompatActivity implements View.OnClickListener {
     Button callksp1,callivory1;
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
